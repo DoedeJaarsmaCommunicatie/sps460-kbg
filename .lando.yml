@@ -1,0 +1,20 @@
+name: sps460-kbg
+recipe: laravel
+config:
+  webroot: public
+
+services:
+  pma:
+    type: phpmyadmin
+    portforward: true
+  hog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
+
+proxy:
+  pma:
+    - pma-sps460-kbg.lndo.site
+  hog:
+    - hog-sps460-kbg.lndo.site
