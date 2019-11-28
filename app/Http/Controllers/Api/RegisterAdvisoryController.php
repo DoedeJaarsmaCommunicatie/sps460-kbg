@@ -49,7 +49,7 @@ class RegisterAdvisoryController extends Controller
     private function failIfUserExists(Request $request)
     {
         if ($this->doesUserExistAsAdvisory($request)) {
-            abort(403, __('errors.duplicate.advisor'));
+            abort(400, __('errors.duplicate.advisor'));
         }
     }
 
@@ -68,23 +68,23 @@ class RegisterAdvisoryController extends Controller
     private function validateAdvisoryRequest(Request $request): void
     {
         if (!$request->has('firstName')) {
-            abort(403, __('errors.firstName.notSupplied'));
+            abort(400, __('errors.firstName.notSupplied'));
         }
 
         if (!$request->has('lastName')) {
-            abort(403, __('errors.lastName.notSupplied'));
+            abort(400, __('errors.lastName.notSupplied'));
         }
 
         if (!$request->has('email')) {
-            abort(403, __('errors.email.notSupplied'));
+            abort(400, __('errors.email.notSupplied'));
         }
 
         if (!$request->has('houseNumber')) {
-            abort(403, __('errors.houseNumber.notSupplied'));
+            abort(400, __('errors.houseNumber.notSupplied'));
         }
 
         if (!$request->has('postalCode')) {
-            abort(403, __('errors.postalCode.notSupplied'));
+            abort(400, __('errors.postalCode.notSupplied'));
         }
     }
 }
