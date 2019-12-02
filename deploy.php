@@ -23,7 +23,6 @@ add('writable_dirs', []);
 // Hosts
 host('staging')
     ->hostname('141.105.127.47')
-    ->stage('production')
     ->roles('app')
     ->port(33)
     ->user('midvast')
