@@ -25,6 +25,7 @@ class RegisterAdvisoryController extends Controller
 
         DB::table('signups')->insert([
             'user_id'   => $id,
+            'type'      => 'advisory',
         ]);
 
         $data = $request->only([
