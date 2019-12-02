@@ -4,10 +4,10 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Project name
-set('application', 'vmw-admin');
+set('application', 'sps460-kgb');
 
 // Project repository
-set('repository', 'git@github.com:Pridestalker/vmw-admin.git');
+set('repository', 'git@github.com:DoedeJaarsmaCommunicatie/sps460-kbg.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
