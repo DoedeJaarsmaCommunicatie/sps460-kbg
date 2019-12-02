@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": "^7.2",
+        "deployer/deployer": "^6.6",
         "illuminate/mail": "^6.6",
         "laravel/lumen-framework": "^6.0"
     },
