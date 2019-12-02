@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Events\Registers\Advisory;
 use App\Http\Controllers\Controller;
 
 class RegisterAdvisoryController extends Controller
@@ -16,7 +17,7 @@ class RegisterAdvisoryController extends Controller
 
             $id = DB::table('users')
                     ->where('email', '=', $request->input('email'))
-                    ->first();
+                    ->first('id');
         } else {
             $id = DB::table('users')->insertGetId($request->only([
                 'firstName', 'lastName', 'email', 'houseNumber', 'postalCode'
@@ -28,9 +29,12 @@ class RegisterAdvisoryController extends Controller
             'type'      => 'advisory',
         ]);
 
+
         $data = $request->only([
             'firstName', 'lastName', 'email', 'houseNumber', 'postalCode'
         ]);
+
+        event(new Advisory($id));
 
         $data['fullName']  = $request->input('firstName') . ' ' . $request->input('lastName');
 

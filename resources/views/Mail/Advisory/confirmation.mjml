@@ -1,0 +1,28 @@
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+
+        <mj-image width="200px" src="https://spaarndammerstraat460.nl/wp-content/uploads/2019/06/Group-10@2x-e1560495964914.png"></mj-image>
+
+        <mj-divider border-color="#6c5d44"></mj-divider>
+
+        <mj-text font-size="20px" color="#6c5d44" font-family="helvetica">
+          Beste {{ $user->firstName }} {{ $user->lastName }},
+        </mj-text>
+				<mj-text font-size="20px" color="#6c5d44" font-family="helvetica">
+          Bedankt voor uw aanmelding als lid voor de klankbordgroep Spaarndammerstraat 460.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+    	<mj-column>
+      	<mj-text font-size="20px" color="#6c5d44" font-family="helvetica">
+        	Met vriendelijke groet,
+          <br /><br />
+          Het team van de Spaarndammerstraat 460
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
