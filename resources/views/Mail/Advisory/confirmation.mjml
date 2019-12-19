@@ -10,8 +10,8 @@
         <mj-text font-size="20px" color="#6c5d44" font-family="helvetica">
           Beste {{ $user->firstName }} {{ $user->lastName }},
         </mj-text>
-				<mj-text font-size="20px" color="#6c5d44" font-family="helvetica">
-          Bedankt voor uw aanmelding voor de klankbordgroep.
+        <mj-text font-size="20px" color="#6c5d44" font-family="helvetica">
+          Bedankt voor uw aanmelding voor de buurtbijeenkomst.
         </mj-text>
       </mj-column>
     </mj-section>

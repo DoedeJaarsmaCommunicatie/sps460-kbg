@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Events\Registers\Advisory;
 use App\Http\Controllers\Controller;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 class RegisterAdvisoryController extends Controller
 {
@@ -27,6 +28,7 @@ class RegisterAdvisoryController extends Controller
         DB::table('signups')->insert([
             'user_id'   => $id,
             'type'      => 'advisory',
+            'options'   => collect($request->input('availability'))->toJson()
         ]);
 
 
@@ -90,6 +92,11 @@ class RegisterAdvisoryController extends Controller
 
         if (!$request->has('postalCode')) {
             abort(400, __('errors.postalCode.notSupplied'));
+        }
+
+        if (!$request->has('availability')) {
+            throw new BadRequestHttpException(__('errors.availability.notSupplied'));
+//            abort(400, __('errors.availability.notSupplied'));
         }
     }
 }

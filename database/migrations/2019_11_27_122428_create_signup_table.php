@@ -38,6 +38,7 @@ class CreateSignupTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('signup');
+        Schema::dropIfExists('users');
+        Schema::dropIfExists('signups');
     }
 }

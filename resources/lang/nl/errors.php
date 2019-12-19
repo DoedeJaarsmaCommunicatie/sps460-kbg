@@ -20,5 +20,8 @@ return [
     ],
     'duplicate'     => [
         'advisor'       => 'Email al aangemeld als lid.'
+    ],
+    'availability'  => [
+        'notSupplied'   => 'Aanwezigheid bij minimaal 1 bijeenkomst is verplicht.'
     ]
 ];
