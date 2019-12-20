@@ -11,13 +11,16 @@
           Beste {{ $user->firstName }} {{ $user->lastName }},
         </mj-text>
         <mj-text font-size="20px" color="#6c5d44" font-family="helvetica">
-          Bedankt voor uw aanmelding voor de buurtbijeenkomst.
+          Bedankt voor uw aanmelding voor de buurtbijeenkomsten op:
+          <br /><br />
+          donderdag 9 januari - 19:30 uur
+          <br />
+          donderdag 23 januari - 19:30 uur
         </mj-text>
-      </mj-column>
-    </mj-section>
-    <mj-section>
-    	<mj-column>
-      	<mj-text font-size="20px" color="#6c5d44" font-family="helvetica">
+        <mj-text font-size="20px" color="#6c5d44" font-family="helvetica">
+          Voorafgaand ontvangt u nog een agenda voor de overleggen.
+        </mj-text>
+        <mj-text font-size="20px" color="#6c5d44" font-family="helvetica">
         	Met vriendelijke groet,
           <br /><br />
           Het team van de Spaarndammerstraat 460
